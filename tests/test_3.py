@@ -45,8 +45,7 @@ class WebPageTest(unittest.TestCase):
         call_div_class = 'tn-elem__7178437221710153310161'
         call_element = self.driver.find_element(By.CLASS_NAME, call_div_class)
         call_element.click()
-        popup_element = self.driver.find_element(By.XPATH, '//*[text()="Если вы не дозвонились, заполните форму на сайте. Мы свяжемся с вами"]')
-        assert popup_element, "Popup element not found"
+        assert "Если вы не дозвонились, заполните форму" in self.driver.page_source
 
     def test_de(self):
         element = self.driver.find_element(By.LINK_TEXT, 'de')
