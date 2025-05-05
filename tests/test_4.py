@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 @pytest.mark.usefixtures('driver')
-class WebPageTest(unittest.TestCase):
+class WaitTest(unittest.TestCase):
 
     def setUp(self):
         super().setUp()
